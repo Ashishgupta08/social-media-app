@@ -1,7 +1,6 @@
 import React from 'react';
 import './components.css';
 import "../index.css";
-import "../Icons/iconfont.css";
 import { useDarkMode } from '../Contexts';
 import { save, zap, home, search, user, light, dark } from "../Icons";
 import { NavLink } from "react-router-dom";
@@ -12,7 +11,7 @@ export function Nav() {
 
     return (
         <>
-            <nav className="fixed top-0 w-full nav-theme m-0 p-0 flex justify-between items-center md:px-12 md:py-1">
+            <nav className="nav-theme fixed top-0 w-full m-0 p-0 flex justify-between items-center md:px-12 md:py-1">
                 <h1 style={{ color: "#10D876" }} className="text-2xl ml-4 md:ml-0 md:text-5xl">
                     {zap}
                     <span className="logo font-extrabold tracking-wider md:text-4xl">

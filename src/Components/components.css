@@ -28,3 +28,11 @@
 .avtaar{
     border-radius: 50%;
 }
+
+.caption{
+    font-size: 0.55rem;
+}
+
+.secondary-text{
+    color: var(--secondary-text-color);
+}
