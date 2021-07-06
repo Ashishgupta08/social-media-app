@@ -1,0 +1,14 @@
+.page{
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    min-height: 100vh;
+    padding-top: 4.5rem;
+}
+
+@media only screen and (min-width: 768px){
+
+    .page{
+        padding-left: 16rem;
+    }
+
+}

@@ -1,0 +1,30 @@
+.nav-theme {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+
+.logo{
+    color: var(--primary-color);
+}
+
+.add{
+    left: 10.25rem;
+}
+
+/* .nav-items{
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+} */
+
+.active>.nav-items{
+    background-color: var(--custom-bg-color);
+    color: var(--primary-color);
+}
+
+.active>span{
+    color: var(--primary-color);
+}
+
+.avtaar{
+    border-radius: 50%;
+}
