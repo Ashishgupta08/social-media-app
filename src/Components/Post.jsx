@@ -17,7 +17,7 @@ export function Post() {
                         Morbi nulla dolor, ornare at commodo non, feugiat non nisi. 
                         Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus.
                     </p>
-                    <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="http://sociala.uitheme.net/assets/images/t-10.jpg" alt="post-img" />
+                    <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="https://cdn.pixabay.com/photo/2015/06/22/08/38/siblings-817369_960_720.jpg" alt="post-img" />
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
@@ -40,7 +40,7 @@ export function Post() {
                         Morbi nulla dolor, ornare at commodo non, feugiat non nisi. 
                         Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus.
                     </p>
-                    {/* <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="http://sociala.uitheme.net/assets/images/t-10.jpg" alt="post-img" /> */}
+                    {/* <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="https://cdn.pixabay.com/photo/2015/06/22/08/38/siblings-817369_960_720.jpg" alt="post-img" /> */}
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
@@ -63,7 +63,7 @@ export function Post() {
                         Morbi nulla dolor, ornare at commodo non, feugiat non nisi. 
                         Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus.
                     </p> */}
-                    <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="http://sociala.uitheme.net/assets/images/t-10.jpg" alt="post-img" />
+                    <img className="w-80 h-auto mx-auto mt-1 rounded-sm md:w-96" src="https://cdn.pixabay.com/photo/2015/06/22/08/38/siblings-817369_960_720.jpg" alt="post-img" />
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
