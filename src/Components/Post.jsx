@@ -21,10 +21,10 @@ export function Post() {
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{comment}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{comment}</span>
                     </div>
-                    <span className="text-xl mx-2 md:text-3xl md:mx-4">{bookmark}</span>
+                    <span className="text-2xl mx-2 md:text-3xl md:mx-4">{bookmark}</span>
                 </div>
                 <p className="mx-4 my-1 text-xs md:mx-16 secondary-text">12345 likes</p>
             </div>
@@ -44,10 +44,10 @@ export function Post() {
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{comment}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{comment}</span>
                     </div>
-                    <span className="text-xl mx-2 md:text-3xl md:mx-4">{bookmark}</span>
+                    <span className="text-2xl mx-2 md:text-3xl md:mx-4">{bookmark}</span>
                 </div>
                 <p className="mx-4 my-1 text-xs md:mx-16 secondary-text">12345 likes</p>
             </div>
@@ -67,12 +67,12 @@ export function Post() {
                 </div>
                 <div className="flex justify-between mx-2 mt-1 md:mx-8 md:px-4">
                     <div className="flex">
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
-                        <span className="text-xl mx-2 md:text-3xl md:mx-4">{comment}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{heartOutline}</span>
+                        <span className="text-2xl mx-2 md:text-3xl md:mx-4">{comment}</span>
                     </div>
                     <span className="text-xl mx-2 md:text-3xl md:mx-4">{bookmark}</span>
                 </div>
-                <p className="mx-4 my-1 text-xs md:mx-16 secondary-text">12345 likes</p>
+                <p className="mx-4 my-1 text-2xs md:mx-16 secondary-text">12345 likes</p>
             </div>
 
         </>

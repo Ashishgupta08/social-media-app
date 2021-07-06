@@ -11,7 +11,7 @@ export function Nav() {
 
     return (
         <>
-            <nav className="nav-theme fixed top-0 w-full m-0 p-0 flex justify-between items-center md:px-12 md:py-1">
+            <nav className="nav-theme fixed top-0 w-full m-0 px-0 py-1 flex justify-between items-center md:px-12 md:py-1">
                 <h1 style={{ color: "#10D876" }} className="text-2xl ml-4 md:ml-0 md:text-5xl">
                     {zap}
                     <span className="logo font-extrabold tracking-wider md:text-4xl">
