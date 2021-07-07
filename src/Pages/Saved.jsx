@@ -7,7 +7,7 @@ export function Saved() {
         <>
             <Nav />
             <div className="page">
-                <h1>Saved Page</h1>
+                <h1 className="md:pt-4">Saved Page</h1>
             </div>
         </>
     )

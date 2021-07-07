@@ -36,3 +36,8 @@
 .secondary-text{
     color: var(--secondary-text-color);
 }
+
+.search{
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}

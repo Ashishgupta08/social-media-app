@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import { Home, Profile, Saved, Search } from './Pages';
+import { Home, Profile, Saved, Search, Login } from './Pages';
 import { useDarkMode } from "./Contexts";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route path='/profile' element={<Profile />}></Route>
         <Route path='/saved' element={<Saved />}></Route>
         <Route path='/search' element={<Search />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
     </div>
   );

@@ -1,13 +1,12 @@
 import React from 'react';
-import './page.css';
 import { Nav } from '../Components';
 
-export function Profile() {
+export function Login() {
     return (
         <>
             <Nav />
             <div className="page">
-                <h1 className="md:pt-4">Profile Page</h1>
+                <h1 className="pt-4">Login Page</h1>
             </div>
         </>
     )
