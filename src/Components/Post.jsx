@@ -1,9 +1,12 @@
 import React from 'react';
 import './components.css';
 import "../index.css";
-import { heartOutline, comment, bookmark } from '../Icons';
+import { heartOutline, comment, bookmark, fillBookmark } from '../Icons';
 
-export function Post() {
+export function Post(data) {
+
+    const { saved } = data;
+
     return (
         <>
             <div className="nav-theme flex flex-col rounded-xl my-2 md:max-w-2xl md:my-6">
@@ -24,7 +27,7 @@ export function Post() {
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{heartOutline}</span>
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{comment}</span>
                     </div>
-                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{bookmark}</span>
+                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{saved ? fillBookmark : bookmark }</span>
                 </div>
                 <p className="mx-4 my-1 text-xs mb-2 md:mx-16 secondary-text">12345 likes</p>
             </div>
@@ -47,7 +50,7 @@ export function Post() {
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{heartOutline}</span>
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{comment}</span>
                     </div>
-                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{bookmark}</span>
+                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{saved ? fillBookmark : bookmark }</span>
                 </div>
                 <p className="mx-4 my-1 text-xs mb-2 md:mx-16 secondary-text">12345 likes</p>
             </div>
@@ -70,7 +73,7 @@ export function Post() {
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{heartOutline}</span>
                         <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{comment}</span>
                     </div>
-                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{bookmark}</span>
+                    <span className="text-2xl mx-2 cursor-pointer md:text-3xl md:mx-4">{saved ? fillBookmark : bookmark }</span>
                 </div>
                 <p className="mx-4 my-1 text-xs mb-2 md:mx-16 secondary-text">12345 likes</p>
             </div>

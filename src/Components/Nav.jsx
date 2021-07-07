@@ -11,7 +11,7 @@ export function Nav() {
 
     return (
         <>
-            <nav className="nav-theme fixed top-0 w-full m-0 px-0 py-1 flex justify-between items-center md:px-12 md:py-1">
+            <nav className="nav-theme fixed top-0 w-full m-0 px-0 py-1 flex justify-between items-center z-10 md:px-12 md:py-1">
                 <h1 className="ml-4">
                     <span className="logo font-extrabold tracking-wider text-xl md:text-4xl">
                         SOCIAL
@@ -39,19 +39,19 @@ export function Nav() {
             <div className="nav-theme hidden md:block pt-8 fixed top-14 flex-shrink-0 w-60 h-full overflow-hidden z-10">
                 <ul className="list-none flex flex-col justify-between rounded-full">
                     <NavLink end to='/' activeClassName="active">
-                        <li className="nav-items text-2xl ml-3 p-4 rounded-full inline-flex align-middle">{home}</li>
+                        <li className="nav-items text-3xl ml-3 p-4 rounded-full inline-flex align-middle">{home}</li>
                         <span className="ml-4 text-xl">Home</span>
                     </NavLink>
                     <NavLink end to='/saved' activeClassName="active">
-                        <li className="nav-items text-2xl ml-3 p-4 rounded-full inline-flex align-middle">{save}</li>
+                        <li className="nav-items text-3xl ml-3 p-4 rounded-full inline-flex align-middle">{save}</li>
                         <span className="ml-4 text-xl">Saved Posts</span>
                     </NavLink>
                     <NavLink end to='/profile' activeClassName="active">
-                        <li className="nav-items text-2xl ml-3 p-4 rounded-full inline-flex align-middle">{user}</li>
+                        <li className="nav-items text-3xl ml-3 p-4 rounded-full inline-flex align-middle">{user}</li>
                         <span className="ml-4 text-xl">Profile</span>
                     </NavLink>
                     <NavLink end to='/login' activeClassName="active">
-                        <li className="nav-items text-2xl ml-3 p-4 rounded-full inline-flex align-middle">{logout}</li>
+                        <li className="nav-items text-3xl ml-3 p-4 rounded-full inline-flex align-middle">{logout}</li>
                         <span className="ml-4 text-xl">LogOut</span>
                     </NavLink>
                 </ul>
@@ -60,16 +60,16 @@ export function Nav() {
             <div className="fixed bottom-0 w-full md:hidden">
                 <ul className="nav-theme list-none flex justify-between rounded-full">
                     <NavLink end to='/' activeClassName="active">
-                        <li className="nav-items text-4xl p-4 rounded-full">{home}</li>
+                        <li className="nav-items text-4xl p-3 rounded-full">{home}</li>
                     </NavLink>
                     <NavLink end to='/search' activeClassName="active">
-                        <li className="nav-items text-4xl p-4 rounded-full">{search}</li>
+                        <li className="nav-items text-4xl p-3 rounded-full">{search}</li>
                     </NavLink>
                     <NavLink end to='/saved' activeClassName="active">
-                        <li className="nav-items text-4xl p-4 rounded-full">{save}</li>
+                        <li className="nav-items text-4xl p-3 rounded-full">{save}</li>
                     </NavLink>
                     <NavLink end to='/profile' activeClassName="active">
-                        <li className="nav-items text-4xl p-4 rounded-full">{user}</li>
+                        <li className="nav-items text-4xl p-3 rounded-full">{user}</li>
                     </NavLink>
                 </ul>
             </div>

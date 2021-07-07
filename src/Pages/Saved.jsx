@@ -7,7 +7,7 @@ export function Saved() {
         <>
             <Nav />
             <div className="page">
-                <Post />
+                <Post saved={true} />
             </div>
         </>
     )

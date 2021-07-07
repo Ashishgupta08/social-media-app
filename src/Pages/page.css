@@ -10,6 +10,10 @@ fieldset{
     color: var(--secondary-text-color);
 }
 
+textarea{
+    background-color: var();
+}
+
 .detail-label{
     color: var(--primary-text-color);
 }
@@ -20,15 +24,15 @@ fieldset{
     color: #f2f2f2;
 }
 
+.new-post{
+    color: var(--primary-color);
+    background-color: var(--custom-bg-color);
+}
+
 @media only screen and (min-width: 768px){
 
     .page{
         padding: 3.5rem 1rem 1rem 18rem;
-    }
-
-    .profile{
-        min-height: none;
-        padding: 2.5rem 1rem 0 18rem;
     }
 
 }
