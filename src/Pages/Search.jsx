@@ -8,7 +8,7 @@ export function Search() {
         <>
             <Nav />
             <div className="page">
-                <div className="search-page self-center flex items-center rounded-2xl py-1 px-4 mr-6 w-full">
+                <div className="nav-theme self-center flex items-center rounded-2xl py-1 px-4 mr-6 w-full">
                     <label htmlFor="search" className="inline-flex self-center">
                         {search}
                     </label>
