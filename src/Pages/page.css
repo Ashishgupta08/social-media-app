@@ -26,4 +26,9 @@ fieldset{
         padding: 3.5rem 1rem 1rem 18rem;
     }
 
+    .profile{
+        min-height: none;
+        padding: 2.5rem 1rem 0 18rem;
+    }
+
 }
