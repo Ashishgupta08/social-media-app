@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './page.css';
+import { NavLink } from 'react-router-dom';
 import { Nav } from '../Components';
 import { arrowUp, arrowDown } from '../Icons';
 
@@ -54,7 +55,9 @@ export function Profile() {
                                     <legend className="px-1">E-Mail</legend>
                                     <label className="px-2 detail-label">LoremIpsum@gmail.com</label>
                                 </fieldset>
-                                <button className="my-1 border rounded-xl outline-none px-6 py-2 logout md:hidden">LogOut</button>
+                                <button className="my-1 border rounded-xl outline-none px-6 py-2 logout md:hidden">
+                                    <NavLink to='/login'>LogOut</NavLink>
+                                </button>
                             </div>
                         </>
                     }
