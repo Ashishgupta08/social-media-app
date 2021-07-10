@@ -1,6 +1,7 @@
 import React from 'react';
 import './page.css';
-import { Nav, Post, CreatePost } from '../Components';
+import { Nav, Post } from '../Components';
+import { CreatePost } from '../features';
 
 export function Home() {
     return (

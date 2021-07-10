@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import { Home, Profile, Saved, Search, Login } from './Pages';
+import { Home, Saved, Search } from './Pages';
+import { Login, Profile } from './features';
 import { useDarkMode } from "./Contexts";
+import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 
 function App() {
 
@@ -11,11 +13,11 @@ function App() {
   return (
     <div data-theme={darkMode ? "dark" : "light"}>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
-        <Route path='/saved' element={<Saved />}></Route>
-        <Route path='/search' element={<Search />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <PrivateRoute path='/' element={<Home />}></PrivateRoute>
+        <PrivateRoute path='/profile' element={<Profile />}></PrivateRoute>
+        <PrivateRoute path='/saved' element={<Saved />}></PrivateRoute>
+        <PrivateRoute path='/search' element={<Search />}></PrivateRoute>
       </Routes>
     </div>
   );
