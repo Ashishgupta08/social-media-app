@@ -1,6 +1,6 @@
 import React from 'react';
-import './page.css';
-import { Nav, Post } from '../Components';
+import '../features.css';
+import { Nav, Post } from '../../Components';
 
 export function Saved() {
     return (

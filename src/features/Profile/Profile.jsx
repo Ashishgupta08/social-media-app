@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../Pages/page.css';
+import '../features.css';
 import { Nav } from '../../Components';
 import { arrowUp, arrowDown } from '../../Icons';
 import { useNavigate } from 'react-router-dom';
@@ -15,18 +15,21 @@ export function Profile() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        (async function () {
-            try {
-                dispatch(getProfileData(auth.token));
-            } catch (error) {
-                console.log("error", error)
-            }
-        })()
+        if(user._id === ""){
+            (async function () {
+                try {
+                    dispatch(getProfileData(auth.token));
+                } catch (error) {
+                    console.log("error", error)
+                }
+            })()
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-    
-    const logout = () => {
+    }, [auth.token])
 
+
+    const logout = () => {
+        localStorage?.removeItem("login");
         navigate('/login')
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './page.css';
-import { Nav } from '../Components';
-import { searchIcon } from "../Icons";
+import '../features.css';
+import { Nav } from '../../Components';
+import { searchIcon } from "../../Icons";
 
 export function Search() {
     return (

@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import { Home, Saved, Search } from './Pages';
-import { Login, Profile } from './features';
+import { Login, Profile, Home, Saved, Search } from './features';
 import { useDarkMode } from "./Contexts";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 

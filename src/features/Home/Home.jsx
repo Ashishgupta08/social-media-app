@@ -1,7 +1,7 @@
 import React from 'react';
-import './page.css';
-import { Nav, Post } from '../Components';
-import { CreatePost } from '../features';
+import '../features.css';
+import { Nav, Post } from '../../Components';
+import { CreatePost } from '../index';
 
 export function Home() {
     return (
