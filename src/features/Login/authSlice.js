@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const userLogin = createAsyncThunk('userSlice/userLogin', async ({username, password}) => {
         const url = baseUrl();
-        const response = await axios.post(`${url}user/login`, { username: username, password: password });
+        const response = await axios.post(`${url}/user/login`, { username: username, password: password });
         return response.data.result
 })
 
@@ -18,7 +18,6 @@ export const authSlice = createSlice({
         isUserLoggedIn: isUserLoggedIn,
         token: savedToken,
         status: "idle",
-        user:{}
     },
     reducers: {
         setUsername: (state, action) => {
@@ -34,6 +33,7 @@ export const authSlice = createSlice({
         setLogout: (state) => {
             state.isUserLoggedIn = false
             state.token = null
+            state.status = "idle"
         }
     },
     extraReducers: {

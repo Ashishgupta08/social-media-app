@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../Components";
-import { google, mail, password } from "../../Icons";
-import { userLogin, setUsername, setPassword, setLogin } from "./authSlice";
+import { password, user } from "../../Icons";
+import { userLogin, setUsername, setPassword } from "./authSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { setProfileData } from "../Profile/profileSlice";
+import { getHomeData } from "../Home/homeSlice";
+import { getProfileData } from "../Profile/profileSlice";
 
 export function Login() {
     const navigate = useNavigate();
@@ -13,12 +14,15 @@ export function Login() {
 
     useEffect(() => {
         if (data.status === "fulfilled") {
+            dispatch(getHomeData(data.token));
+            dispatch(getProfileData(data.token));
             localStorage?.setItem(
                 "login",
                 JSON.stringify({ isUserLoggedIn: true, token: data.token })
             );
             navigate("/");
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data.status]);
 
     const signInHandler = async () => {
@@ -37,7 +41,7 @@ export function Login() {
                     <h1 className="text-2xl mb-6 mt-2">Login into your account</h1>
                     <div className="login-field self-center flex items-center border rounded-sm py-1 px-4 mx-5 my-3">
                         <label htmlFor="mail" className="inline-flex self-center text-xl">
-                            {mail}
+                            {user}
                         </label>
                         <input
                             onChange={(e) => {
@@ -71,7 +75,7 @@ export function Login() {
                             Login
                         </button>
                     </div>
-                    <p className="secondary-text mt-8">Continue with Google</p>
+                    {/* <p className="secondary-text mt-8">Continue with Google</p>
                     <div className="flex justify-between items-center logout rounded mb-8">
                         <span className="align-middle bg-white p-2 mx-2 text-base">
                             {google}
@@ -85,7 +89,7 @@ export function Login() {
                                 Sign in with Google
                             </button>
                         </span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

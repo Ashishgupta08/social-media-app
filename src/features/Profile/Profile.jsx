@@ -5,13 +5,15 @@ import { arrowUp, arrowDown } from '../../Icons';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProfileData } from './profileSlice';
+import { setLogout } from '../Login/authSlice';
+
 
 export function Profile() {
 
     const [view, setView] = useState({ profile: true, followers: false, following: false, posts: false });
     const navigate = useNavigate();
     const auth = useSelector((state) => state.auth);
-    const {user} = useSelector((state) => state.userData);
+    const { user } = useSelector((state) => state.userData);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -30,6 +32,7 @@ export function Profile() {
 
     const logout = () => {
         localStorage?.removeItem("login");
+        dispatch(setLogout());
         navigate('/login')
     }
 

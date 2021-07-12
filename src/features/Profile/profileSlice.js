@@ -4,10 +4,9 @@ import axios from 'axios';
 
 export const getProfileData = createAsyncThunk('profileSlice/getProfileData', async (token) => {
     const url = baseUrl();
-    const response = await axios.get(`${url}user/getUserData`, { headers: { Authorization: token } });
+    const response = await axios.get(`${url}/user/getUserData`, { headers: { Authorization: token } });
     return response.data.result
 })
-
 
 export const profileSlice = createSlice({
     name: "profile",
@@ -44,7 +43,7 @@ export const profileSlice = createSlice({
         },
         [getProfileData.rejected]: (state) => {
             state.status = "rejected"
-        },
+        }
     }
 })
 

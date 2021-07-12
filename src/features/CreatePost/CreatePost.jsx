@@ -8,6 +8,8 @@ export function CreatePost() {
 
     const dispatch = useDispatch();
     const data = useSelector(state => state.createPost)
+    const auth = useSelector((state) => state.auth);
+
 
     function uploadImg(e) {
         let selected = e.target.files[0];
@@ -28,6 +30,18 @@ export function CreatePost() {
         );
     }
 
+    const postUpdate = () => {
+        if (data.image === "" && data.caption === "") {
+            return console.log("Either give some text or image to upload.")
+        } else if (data.caption === "") {
+            dispatch(postUpload({ token :auth.token, post: { image: data.image }}))
+        } else if (data.image === "") {
+            dispatch(postUpload({ token :auth.token, post: { caption: data.caption }}))
+        } else {
+            dispatch(postUpload({ token :auth.token, post: { caption: data.caption, image: data.image }}))
+        }
+    }
+
     return (
         <>
             <div className="nav-theme flex flex-col rounded-xl my-2 md:max-w-2xl md:my-6">
@@ -45,7 +59,7 @@ export function CreatePost() {
                         <input onChange={uploadImg} type="file" id="image" name="image" accept="image/*" hidden />
                         <span className="text-green-500 text-2xl">{imgUpload}</span>
                     </label>
-                    <button className="border rounded-xl outline-none px-6 my-2 logout" onClick={()=>{dispatch(postUpload(data))}}>Post</button>
+                    <button className="border rounded-xl outline-none px-6 my-2 logout" onClick={() => { postUpdate() }}>Post</button>
                 </div>
             </div>
         </>

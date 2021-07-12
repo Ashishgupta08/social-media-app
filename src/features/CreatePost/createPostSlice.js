@@ -1,16 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { auth } from '../../Firebase/config';
+import axios from "axios";
+import { baseUrl } from "../../Utils/baseUrl";
 
-export const postUpload = createAsyncThunk('createPostSlice/postUpload', async (data) => {
-    if(data.image === ""){
-        
-    }else if(data.caption === ""){
-
-    }else{
-
-    }
-    console.log(data)
-    console.log(auth.currentUser.uid)
+export const postUpload = createAsyncThunk('createPostSlice/postUpload', async ({ token, post }) => {
+    const url = baseUrl();
+    const postData = { post: post };
+    const axiosConfig = { headers: { Authorization: token } };
+    const res = await axios.post(`${url}/post`, postData, axiosConfig);
+    return res
 })
 
 export const createPostSlice = createSlice({
@@ -26,15 +23,11 @@ export const createPostSlice = createSlice({
         },
         addImage: (state, action) => {
             state.image = action.payload;
-        },
-        resetInitialState: (state) => {
-            state.image = ""
-            state.caption = ""
-            state.postUploadStatus = ""
         }
     },
     extraReducers: {
         [postUpload.fulfilled]: (state) => {
+            console.log("post uploaded")
             state.status = "fulfilled"
         },
         [postUpload.pending]: (state) => {

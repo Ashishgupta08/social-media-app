@@ -1,11 +1,22 @@
 import React from 'react';
 import './components.css';
 import "../index.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { save, home, searchIcon, user, logout } from "../Icons";
 import { Header } from './index';
+import { setLogout } from '../features/Login/authSlice';
+import { useDispatch } from 'react-redux';
 
 export function Nav() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const logoutHandler = () => {
+        localStorage?.removeItem("login");
+        dispatch(setLogout());
+        navigate('/login')
+    }
 
     return (
         <>
@@ -24,7 +35,7 @@ export function Nav() {
                         <li className="nav-items text-3xl ml-3 p-3 rounded-full inline-flex align-middle">{user}</li>
                         <span className="ml-4 text-xl">Profile</span>
                     </NavLink>
-                    <NavLink end to='/login' activeClassName="active">
+                    <NavLink end to='/login' activeClassName="active" onClick={()=>{logoutHandler()}}>
                         <li className="nav-items text-3xl ml-3 p-3 rounded-full inline-flex align-middle">{logout}</li>
                         <span className="ml-4 text-xl">LogOut</span>
                     </NavLink>
