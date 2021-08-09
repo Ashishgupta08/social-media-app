@@ -22,7 +22,7 @@ export function Login() {
             );
             navigate("/");
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data.status]);
 
     const signInHandler = async () => {
@@ -90,6 +90,13 @@ export function Login() {
                             </button>
                         </span>
                     </div> */}
+
+                    <div>
+                        <p>Test Credentials -
+                            <li>Username: <span className="sign-up">test</span></li>
+                            <li>Password: <span className="sign-up">test</span></li>
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
